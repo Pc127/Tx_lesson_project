@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\GamePersist.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\JoyStick.cs" />
+    <Compile Include="Assets\Scripts\SliderControl.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

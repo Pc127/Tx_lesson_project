@@ -5,16 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    // 定义了进入游戏场景
     public void EnterGame()
     {
         SceneManager.LoadScene("game_scene");
