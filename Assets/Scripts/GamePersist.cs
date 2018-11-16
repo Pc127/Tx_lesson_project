@@ -38,6 +38,7 @@ public class GamePersist {
         this.waterHeight = water;
     }
 
+    // 人与水位之差
     public int GetDiff()
     {
         return this.buildHeight - this.waterHeight;
