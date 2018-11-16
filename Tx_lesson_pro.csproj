@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\JoyStick.cs" />
     <Compile Include="Assets\Scripts\SliderControl.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
+    <Compile Include="Assets\Scripts\WaterLevel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

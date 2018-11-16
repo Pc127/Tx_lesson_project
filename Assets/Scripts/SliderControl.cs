@@ -7,6 +7,7 @@ public class SliderControl : MonoBehaviour {
 
     private Slider slider;
 
+    private int maxm = 200;
     // 获取slider
 	void Start () {
         this.slider = GetComponent<Slider>();
@@ -14,6 +15,6 @@ public class SliderControl : MonoBehaviour {
 	
 	// 根据水位高度更新slider
 	void Update () {
-        this.slider.value = this.slider.value + 0.01f;
+        this.slider.value = (GamePersist.GetInstance().GetDiff()) / this.maxm;
 	}
 }

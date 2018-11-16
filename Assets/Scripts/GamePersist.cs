@@ -26,6 +26,7 @@ public class GamePersist {
     // 构造方法封装
     private GamePersist()
     {
+        this.Init(0, 0, 0, -100);
     }
 
     // 提供一个初始化方法
@@ -34,5 +35,11 @@ public class GamePersist {
         this.roleHeight = role;
         this.screenHeight = screen;
         this.buildHeight = build;
+        this.waterHeight = water;
+    }
+
+    public int GetDiff()
+    {
+        return this.buildHeight - this.waterHeight;
     }
 }
