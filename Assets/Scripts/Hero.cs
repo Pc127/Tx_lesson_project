@@ -18,15 +18,22 @@ public class Hero : MonoBehaviour {
     {
         GamePersist.GetInstance().Init(0, 0, 0, -100);
         this.rigidbody = this.GetComponent<Rigidbody2D>();
+        GamePersist.GetInstance().hero = this;
     }
 
     // 每帧进行移动
     void Update () {
         movement = joy.movement;
-        Debug.Log(movement);
+        //Debug.Log(movement);
         //this.transform.Translate(movement * 5, 0);
         this.rigidbody.AddForce(movement * this.speed);
-        Debug.Log(GamePersist.GetInstance().buildHeight);
+        //Debug.Log(GamePersist.GetInstance().buildHeight);
+    }
+
+    public void HeroMove(Vector2 movement)
+    {
+        this.transform.Translate(movement);
+        GamePersist.GetInstance().roleHeight = GamePersist.GetInstance().roleHeight + (int)movement.y; 
     }
 
 }

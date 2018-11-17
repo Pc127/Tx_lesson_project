@@ -12,6 +12,7 @@ public class GamePersist {
 
     public int waterHeight;
 
+    public Hero hero;
     // 设计为单例模式
     private static GamePersist gamePersist = null;
 

@@ -15,7 +15,7 @@ public class SliderControl : MonoBehaviour {
 	
 	// 根据水位高度更新slider
 	void Update () {
-        Debug.Log("水位高度" + GamePersist.GetInstance().waterHeight);
+         // Debug.Log("水位高度" + GamePersist.GetInstance().waterHeight);
         this.slider.value = (100 - GamePersist.GetInstance().GetDiff()) *1.0f / this.maxm;
 	}
 }
