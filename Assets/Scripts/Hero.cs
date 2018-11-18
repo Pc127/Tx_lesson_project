@@ -12,7 +12,7 @@ public class Hero : MonoBehaviour {
     private Rigidbody2D rigidbody;
 
     // 速度
-    private float speed = 200.0f;
+    private float speed = 500.0f;
 
     private void Start()
     {
@@ -24,10 +24,8 @@ public class Hero : MonoBehaviour {
     // 每帧进行移动
     void Update () {
         movement = joy.movement;
-        //Debug.Log(movement);
         //this.transform.Translate(movement * 5, 0);
         this.rigidbody.AddForce(movement * this.speed);
-        //Debug.Log(GamePersist.GetInstance().buildHeight);
     }
 
     public void HeroMove(Vector2 movement)

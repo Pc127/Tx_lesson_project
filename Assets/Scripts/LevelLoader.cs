@@ -21,10 +21,12 @@ public class LevelLoader : MonoBehaviour {
         GameObject f1 = Instantiate(this.f1Pre);
         f1.transform.parent = this.levelContainer.transform;
         f1.transform.localPosition = new Vector2(0, 0);
+        f1.transform.localScale = new Vector3(1, 1, 1);
 
         GameObject f2 = Instantiate(this.f2Pre);
         f2.transform.parent = this.levelContainer.transform;
         f2.transform.localPosition = new Vector2(0, 250);
+        f2.transform.localScale = new Vector3(1, 1, 1);
     }
 	
 	// Update is called once per frame
@@ -38,8 +40,8 @@ public class LevelLoader : MonoBehaviour {
         }
         if( count != 0)
         {
-            this.levelContainer.transform.Translate(new Vector2(0, -1));
-            GamePersist.GetInstance().hero.transform.Translate(new Vector2(0, -1));
+            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y-1);
+            GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 1);
             count--;
         }
 	}
