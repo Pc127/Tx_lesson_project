@@ -78,14 +78,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\DoorTrigger.cs" />
-    <Compile Include="Assets\Scripts\GamePersist.cs" />
-    <Compile Include="Assets\Scripts\Hero.cs" />
-    <Compile Include="Assets\Scripts\JoyStick.cs" />
-    <Compile Include="Assets\Scripts\LevelLoader.cs" />
-    <Compile Include="Assets\Scripts\SliderControl.cs" />
-    <Compile Include="Assets\Scripts\Title.cs" />
-    <Compile Include="Assets\Scripts\WaterLevel.cs" />
+    <Compile Include="Assets\Scripts\Btn\InteractBtn.cs" />
+    <Compile Include="Assets\Scripts\Btn\JoyStick.cs" />
+    <Compile Include="Assets\Scripts\Btn\SliderControl.cs" />
+    <Compile Include="Assets\Scripts\Collision\FloorCollision.cs" />
+    <Compile Include="Assets\Scripts\MainLogic\GamePersist.cs" />
+    <Compile Include="Assets\Scripts\MainLogic\Hero.cs" />
+    <Compile Include="Assets\Scripts\MainLogic\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\MainLogic\WaterLevel.cs" />
+    <Compile Include="Assets\Scripts\Title\Title.cs" />
+    <Compile Include="Assets\Scripts\Trigger\BoxTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\DoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\WarnTrigger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
