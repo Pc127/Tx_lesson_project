@@ -31,7 +31,7 @@ public class LevelLoader : MonoBehaviour {
         if( count != 0)
         {
             this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y-2);
-            GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 2);
+            //GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 2);
             count--;
         }
 	}
