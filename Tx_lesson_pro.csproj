@@ -85,12 +85,19 @@
     <Compile Include="Assets\Scripts\MainLogic\Hero.cs" />
     <Compile Include="Assets\Scripts\MainLogic\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\MainLogic\WaterLevel.cs" />
+    <Compile Include="Assets\Scripts\SceneLogic\Generator.cs" />
     <Compile Include="Assets\Scripts\Title\Title.cs" />
+    <Compile Include="Assets\Scripts\Trigger\ButtonLadderTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\DoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\DownTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\DropTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\FakeTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\FireTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\GrassTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\JumpTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\LadderTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\PassTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\TreeTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\WarnTrigger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,6 +8,8 @@ public class Hero : MonoBehaviour {
     public GameObject warn;
 
     public JoyStick joy;
+    // 是否可以移动
+    public bool moveEnable = true;
     // 是否可以左右移动
     public bool horzEnable = true;
     // 是否可以上下移动
@@ -23,10 +25,10 @@ public class Hero : MonoBehaviour {
     private Rigidbody2D rigidbody;
 
     // 速度
-    private float speed = 100.0f;
+    private float speed = 500.0f;
     
     // 跳跃高度
-    private float jumpForce = 150000.0f;
+    private float jumpForce = 500000000.0f;
 
     private void Start()
     {
@@ -95,6 +97,7 @@ public class Hero : MonoBehaviour {
         this.interEnable = false;
     }
 
+    // 对于重力的处理
     public void DisableGravity()
     {
         this.rigidbody.gravityScale = 0;
@@ -103,5 +106,13 @@ public class Hero : MonoBehaviour {
     public void EnableGravity()
     {
         this.rigidbody.gravityScale = 100f;
+    }
+
+    // 施加碰撞力
+    public void AddForce(int force)
+    {
+        Vector2 myForce = new Vector2(-1 * force, 0);
+        //this.rigidbody.velocity = new Vector2(100000000, 100000000);
+        this.rigidbody.AddForce(myForce);
     }
 }

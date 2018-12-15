@@ -6,14 +6,13 @@ public class DoorTrigger : MonoBehaviour {
 
 
     // 把人物移动到上一层
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (GamePersist.GetInstance().hero.interEnable)
+        if (other.GetComponent<Hero>() != null)
         {
             Debug.Log("移动向上一层");
-            GamePersist.GetInstance().hero.HeroMove(new Vector2(0, 250));
+            GamePersist.GetInstance().hero.HeroMove(new Vector2(-180, 210));
             GamePersist.GetInstance().currentLevel++;
-            GamePersist.GetInstance().hero.DoNotInter();
         }
     }
 }

@@ -15,13 +15,22 @@ public class FloorCollision : MonoBehaviour {
 	}
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        GamePersist.GetInstance().hero.jumpEnable = true;
-        Debug.Log("与地板碰撞");
+        if (coll.gameObject.GetComponent<Hero>() != null)
+        {
+            GamePersist.GetInstance().hero.jumpEnable = true;
+            Debug.Log("与地板碰撞");
+
+        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D coll)
     {
-        GamePersist.GetInstance().hero.jumpEnable = false;
-        Debug.Log("离开地板");
+        if (coll.gameObject.GetComponent<Hero>() != null)
+        {
+            GamePersist.GetInstance().hero.jumpEnable = false;
+            Debug.Log("离开地板");
+
+        }
     }
 }
