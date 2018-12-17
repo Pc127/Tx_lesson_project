@@ -11,8 +11,8 @@ public class DoorTrigger : MonoBehaviour {
         if (other.GetComponent<Hero>() != null)
         {
             Debug.Log("移动向上一层");
-            GamePersist.GetInstance().hero.HeroMove(new Vector2(-180, 300f));
-            //GamePersist.GetInstance().currentLevel++;
+            GamePersist.GetInstance().hero.HeroMove(new Vector2(-180, 210));
+            GamePersist.GetInstance().currentLevel++;
         }
     }
 }

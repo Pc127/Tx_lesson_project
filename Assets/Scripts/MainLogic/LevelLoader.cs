@@ -22,12 +22,6 @@ public class LevelLoader : MonoBehaviour {
     }
 	
 	void Update () {
-        
-        float nowHeight = GamePersist.GetInstance().hero.transform.localPosition.y;
-        //Debug.Log(nowHeight);
-        nowHeight += 125f;
-        GamePersist.GetInstance().currentLevel = (int)(nowHeight / 250f) +1;
-        
 		if (GamePersist.GetInstance().currentLevel > currentLevel)
         {
             this.currentLevel++;
@@ -39,19 +33,15 @@ public class LevelLoader : MonoBehaviour {
         }
         if( upcount != 0)
         {
-            for (int i=0;i<125;i++)
-                this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y-2);
+            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y-2);
             //GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 2);
-            //upcount--;
-            upcount = 0;
+            upcount--;
         }
         if (downcount != 0)
         {
-            for (int i=0;i<125;i++)
-                this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y + 2);
+            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y + 2);
             //GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 2);
-            //downcount--;
-            downcount = 0;
+            downcount--;
         }
     }
 }

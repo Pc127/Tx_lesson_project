@@ -20,7 +20,7 @@ public class DropTrigger : MonoBehaviour {
         {
             Debug.Log("与水滴碰撞");
             GamePersist.GetInstance().hero.AddForce(10000000);
-            //GamePersist.GetInstance().hero.velocity();
+
         }
     }
 }

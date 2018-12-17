@@ -24,13 +24,11 @@ public class Hero : MonoBehaviour {
 
     private Rigidbody2D rigidbody;
 
-    private Vector2 pos;
     // 速度
-    private float speed = 140.0f;
-    private float Gravity = 100f;
+    private float speed = 500.0f;
+    
     // 跳跃高度
-    private float jumpForce = 500.0f;
-    private float jumpHight = 3500f;
+    private float jumpForce = 500000000.0f;
 
     private void Start()
     {
@@ -40,39 +38,13 @@ public class Hero : MonoBehaviour {
 
     // 每帧进行移动
     void Update () {
-        //this.pos = this.GetComponent<Transform>().localPosition;
-        //Debug.Log(pos.y);
         movement = joy.movement;
         // 不控制向上跳跃
         if(horzEnable == false)
             movement.x = 0;
         if (vertEnable == false)
             movement.y = 0;
-        if (horzEnable) this.rigidbody.velocity = new Vector2(movement.x * this.speed, this.rigidbody.velocity.y);
-        if (vertEnable) this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, movement.y * this.speed);
-
-        //double bundle
-
-        float horKey = Input.GetAxis("Horizontal");
-        float verKey = Input.GetAxis("Vertical");
-        //Debug.Log(movement.ToString());
-        if (Input.GetKey(KeyCode.A)&& horzEnable)
-        {
-            //Debug.Log("A Down");
-            this.rigidbody.velocity = new Vector2(-1.5f * this.speed, this.rigidbody.velocity.y);
-            //transform.position += new Vector3(-1f * this.speed, 0,0);
-        }
-        if (Input.GetKey(KeyCode.D)&& horzEnable)
-        {
-            //Debug.Log("D Down");
-            this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
-            //transform.position += new Vector3( 1f * this.speed, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //Debug.Log("Space Down");
-            Jump();
-        }
+        this.rigidbody.velocity = (movement * this.speed);
     }
 
     // 跳跃函数
@@ -81,11 +53,9 @@ public class Hero : MonoBehaviour {
         Debug.Log("调用jump");
         if (jumpEnable)
         {
-            Vector2 jump = new Vector2(0, Mathf.Sqrt(2f*jumpHight*Gravity));
-            Debug.Log(jump);
-            Debug.Log(this.rigidbody.gravityScale);
-            this.rigidbody.velocity += new Vector2(0 , jump.y);
-            //this.rigidbody.AddForce(jump);
+            Vector2 jump = new Vector2(0, jumpForce);
+            //this.rigidbody.velocity = new Vector2(100000000, 100000000);
+            this.rigidbody.AddForce(jump);
         }
     }
 
@@ -135,28 +105,14 @@ public class Hero : MonoBehaviour {
 
     public void EnableGravity()
     {
-        this.rigidbody.gravityScale = Gravity;
-    }
-
-    private void MoveDisable()
-    {
-        horzEnable = false;
-        //vertEnable = false;
-    }
-
-    private void MoveEnable()
-    {
-        horzEnable = true;
-        //vertEnable = true;
+        this.rigidbody.gravityScale = 100f;
     }
 
     // 施加碰撞力
     public void AddForce(int force)
     {
         Vector2 myForce = new Vector2(-1 * force, 0);
-        MoveDisable();
-        this.rigidbody.velocity = new Vector2(-Mathf.Sqrt(2f * jumpHight * Gravity), Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f);
-        this.Invoke("MoveEnable", 0.3f);
-        //this.rigidbody.AddForce(myForce);
+        //this.rigidbody.velocity = new Vector2(100000000, 100000000);
+        this.rigidbody.AddForce(myForce);
     }
 }
