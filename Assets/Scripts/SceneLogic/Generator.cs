@@ -37,7 +37,7 @@ public class Generator : MonoBehaviour {
     void DoCreate()
     {
         GameObject th = Instantiate(this.sth);
-        th.transform.parent = this.transform;
+        th.transform.SetParent( this.transform);
         th.transform.localPosition = new Vector2(0, 0);
         th.transform.localScale = new Vector3(1, 1, 1);
         th.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1 * this.speed);
