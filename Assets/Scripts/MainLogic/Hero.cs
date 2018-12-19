@@ -18,7 +18,8 @@ public class Hero : MonoBehaviour {
     public bool jumpEnable = true;
     // 是否处于interAct
     public bool interEnable = false;
-
+    // 是否拿到了钥匙和水
+    public bool keyAndWater = false;
     // 获取转轴的移动向量
     private Vector2 movement;
 
@@ -92,7 +93,7 @@ public class Hero : MonoBehaviour {
     // 移动位置的函数
     public void HeroMove(Vector2 movement)
     {
-        this.transform.Translate(movement);
+        this.gameObject.GetComponent<RectTransform>().transform.localPosition = new Vector3(movement.x,movement.y ,0);
     }
 
     // 调用提示UI

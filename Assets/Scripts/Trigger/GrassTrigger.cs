@@ -10,8 +10,6 @@ public class GrassTrigger : MonoBehaviour {
     {
         if (enable)
         {
-            Debug.Log("碰到梯子");
-            Debug.Log(GamePersist.GetInstance().hero.interEnable);
             if (GamePersist.GetInstance().hero.interEnable)
             {
                 GamePersist.GetInstance().hero.DoAWarn("为小树苗浇了水，海水貌似暂停了上涨");
