@@ -8,6 +8,18 @@ public class Hero : MonoBehaviour {
     public GameObject warn;
 
     public JoyStick joy;
+    // 三张图片 
+    public Sprite sp1;
+    public Sprite sp2;
+    public Sprite sp3;
+    public Sprite sp01;
+    public Sprite sp02;
+    public Sprite sp03;
+    private int spindex = 1;
+    private bool spright = true;
+    // 两帧动画的间隔
+    private float spinterval = 0.2f;
+    private float spcount = 0;
     // 是否可以移动
     public bool moveEnable = true;
     // 是否可以左右移动
@@ -22,7 +34,7 @@ public class Hero : MonoBehaviour {
     public bool keyAndWater = false;
     // 获取转轴的移动向量
     private Vector2 movement;
-
+    
     private Rigidbody2D rigidbody;
 
     private Vector2 pos;
@@ -32,40 +44,59 @@ public class Hero : MonoBehaviour {
     // 跳跃高度
     private float jumpForce = 500.0f;
     private float jumpHight = 3500f;
+    // image组件
+    private Image image;
 
     private void Start()
     {
         this.rigidbody = this.GetComponent<Rigidbody2D>();
         GamePersist.GetInstance().hero = this;
+        image = this.GetComponent<Image>();
     }
 
     // 每帧进行移动
     void Update () {
-        //this.pos = this.GetComponent<Transform>().localPosition;
-        //Debug.Log(pos.y);
+        // 控制动画
+        spcount += Time.deltaTime;
+        Debug.Log(spcount);
+        Debug.Log(spindex);
+        if (spcount > spinterval)
+        {   // 123的循环
+            spcount -= spinterval;
+            spindex = spindex % 4 +1;
+            if (spindex == 1)
+                image.overrideSprite = spright ? sp1 : sp01;
+            else if (spindex == 2)
+                image.overrideSprite = spright ? sp2: sp02;
+            else if (spindex == 3)
+                image.overrideSprite = spright ? sp3 : sp03;
+            else if (spindex == 4)
+                image.overrideSprite = spright ? sp2 : sp02;
+        }
+        if (movement.x < 0)
+            spright = false;
+        else if (movement.x > 0)
+            spright = true;
+
         movement = joy.movement;
         // 不控制向上跳跃
-        if(horzEnable == false)
+        if (horzEnable == false)
             movement.x = 0;
         if (vertEnable == false)
             movement.y = 0;
         if (horzEnable) this.rigidbody.velocity = new Vector2(movement.x * this.speed, this.rigidbody.velocity.y);
         if (vertEnable) this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, movement.y * this.speed);
 
-        //double bundle
 
         float horKey = Input.GetAxis("Horizontal");
         float verKey = Input.GetAxis("Vertical");
-        //Debug.Log(movement.ToString());
+
         if (Input.GetKey(KeyCode.A)&& horzEnable)
         {
-            //Debug.Log("A Down");
             this.rigidbody.velocity = new Vector2(-1.5f * this.speed, this.rigidbody.velocity.y);
-            //transform.position += new Vector3(-1f * this.speed, 0,0);
         }
         if (Input.GetKey(KeyCode.D)&& horzEnable)
         {
-            //Debug.Log("D Down");
             this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
             //transform.position += new Vector3( 1f * this.speed, 0, 0);
         }

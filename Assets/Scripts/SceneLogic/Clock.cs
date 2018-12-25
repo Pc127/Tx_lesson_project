@@ -27,8 +27,8 @@ public class Clock : MonoBehaviour
     {
         float presentZ = this.stick.GetComponent<RectTransform>().rotation.z;
 
-        Debug.Log(this.stick.GetComponent<RectTransform>().localRotation);
-        Debug.Log(this.stick.GetComponent<RectTransform>().rotation);
+        // Debug.Log(this.stick.GetComponent<RectTransform>().localRotation);
+        // Debug.Log(this.stick.GetComponent<RectTransform>().rotation);
 
         if(presentZ >= maxm || presentZ <= minm)
         {
@@ -37,13 +37,13 @@ public class Clock : MonoBehaviour
 
         if (isPuls)
         {
-            Debug.Log("增加");
+            //Debug.Log("增加");
             //this.stick.GetComponent<RectTransform>().localRotation.Set(0, 0, presentZ + this.speed, 1);
             this.stick.GetComponent<RectTransform>().Rotate(new Vector3(0, 0, speed));
         }
         else
         {
-            Debug.Log("减少");
+            // Debug.Log("减少");
             //this.stick.GetComponent<RectTransform>().localRotation.Set(0, 0, presentZ - this.speed, 1);
             this.stick.GetComponent<RectTransform>().Rotate(new Vector3(0, 0, -1 * speed));
         }
