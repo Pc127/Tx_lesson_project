@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HotLadderTrigger : MonoBehaviour
+public class ActWithSthDisact : MonoBehaviour
 {
-    public GameObject fire;
+    public GameObject obj;
 
-    public GameObject ladder;
+    public GameObject sth;
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
-        if(fire.active == false)
+        if(sth.active == false)
         {
-            ladder.SetActive(true);
+            obj.SetActive(true);
         }
         
     }

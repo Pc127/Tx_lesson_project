@@ -14,7 +14,6 @@ public class LockedDoorTrigger : MonoBehaviour
             {
                 if (GamePersist.GetInstance().hero.keyAndWater == true)
                 {
-                    // 上楼逻辑
                     GamePersist.GetInstance().hero.HeroMove(new Vector2(0, 0));
                 }
                 else {

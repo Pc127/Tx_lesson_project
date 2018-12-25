@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpTrigger : MonoBehaviour {
 
-    // Use this for initialization
+    // 进入碰撞体时，取消重力，并使人物可以跳跃
     public void OnTriggerEnter2D(Collider2D other)
     {
         GamePersist.GetInstance().hero.jumpEnable = true;

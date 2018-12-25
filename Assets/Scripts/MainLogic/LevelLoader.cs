@@ -32,11 +32,11 @@ public class LevelLoader : MonoBehaviour {
 		if (GamePersist.GetInstance().currentLevel > currentLevel)
         {
             this.currentLevel++;
-            this.upcount = 125;
+            this.upcount += 125;
         }else if (GamePersist.GetInstance().currentLevel < currentLevel)
         {
             this.currentLevel--;
-            this.downcount = 125;
+            this.downcount += 125;
         }
         if( upcount != 0)
         {

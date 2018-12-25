@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorControlTrigger : MonoBehaviour
+public class ActWithEnable : MonoBehaviour
 {
     // 需要激活的物体
-    public GameObject obj;
+    public GameObject actSth;
 
     private bool enable = false;
 
@@ -15,7 +15,7 @@ public class DoorControlTrigger : MonoBehaviour
         {
             if (GamePersist.GetInstance().hero.interEnable)
             {
-                this.obj.SetActive(true);
+                this.actSth.SetActive(true);
             }
         }
     }

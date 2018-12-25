@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FakeTrigger : MonoBehaviour {
+public class DestoryWithoutEnable : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
