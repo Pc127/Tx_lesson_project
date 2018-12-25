@@ -65,13 +65,26 @@ public class Hero : MonoBehaviour {
             spcount -= spinterval;
             spindex = spindex % 4 +1;
             if (spindex == 1)
+            {
                 image.overrideSprite = spright ? sp1 : sp01;
+                this.GetComponent<RectTransform>().localScale = new Vector3(1,1,0); ;
+            }
             else if (spindex == 2)
-                image.overrideSprite = spright ? sp2: sp02;
-            else if (spindex == 3)
-                image.overrideSprite = spright ? sp3 : sp03;
-            else if (spindex == 4)
+            {
                 image.overrideSprite = spright ? sp2 : sp02;
+                this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+            }
+            else if (spindex == 3)
+            {
+                image.overrideSprite = spright ? sp3 : sp03;
+                this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+            }
+
+            else if (spindex == 4) {
+                image.overrideSprite = spright ? sp2 : sp02;
+                this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+            }
+                
         }
         if (movement.x < 0)
             spright = false;
