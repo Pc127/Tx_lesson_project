@@ -23,7 +23,9 @@ public class StickWithEnable : MonoBehaviour
                 {
                     unStick();
                 }
-                
+                GamePersist.GetInstance().hero.interEnable = false;
+
+
             }
         }
     }
@@ -41,6 +43,7 @@ public class StickWithEnable : MonoBehaviour
         GamePersist.GetInstance().hero.transform.parent = this.pretrans.transform;
         GamePersist.GetInstance().hero.moveEnable = true;
         GamePersist.GetInstance().hero.EnableGravity();
+        GamePersist.GetInstance().hero.KeepVertical();
         isStick = false;
     }
 
