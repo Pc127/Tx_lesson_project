@@ -204,9 +204,4 @@ public class Hero : MonoBehaviour {
         this.Invoke("MoveEnable", 0.3f);
         //this.rigidbody.AddForce(myForce);
     }
-
-    public void KeepVertical()
-    {
-        this.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
-    }
 }

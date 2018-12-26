@@ -22,17 +22,12 @@ public class LevelLoader : MonoBehaviour {
     }
 	
 	void Update () {
-
-        // 仅仅当hero坐标系位于
-        if (GamePersist.GetInstance().hero.transform.parent == levelContainer.transform)
-        {
-            // 计算楼层
-            float nowHeight = GamePersist.GetInstance().hero.transform.localPosition.y;
-            //Debug.Log(nowHeight);
-            nowHeight += 125f;
-            GamePersist.GetInstance().currentLevel = (int)(nowHeight / 250f) + 1;
-        }
         
+        // 计算楼层
+        float nowHeight = GamePersist.GetInstance().hero.transform.localPosition.y;
+        //Debug.Log(nowHeight);
+        nowHeight += 125f;
+        GamePersist.GetInstance().currentLevel = (int)(nowHeight / 250f) +1;
         
 		if (GamePersist.GetInstance().currentLevel > currentLevel)
         {
