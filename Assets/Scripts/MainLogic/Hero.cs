@@ -104,13 +104,22 @@ public class Hero : MonoBehaviour {
         float horKey = Input.GetAxis("Horizontal");
         float verKey = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.A)&& horzEnable)
+        if (Input.GetKey(KeyCode.A) && horzEnable)
         {
             this.rigidbody.velocity = new Vector2(-1.5f * this.speed, this.rigidbody.velocity.y);
         }
-        if (Input.GetKey(KeyCode.D)&& horzEnable)
+        if (Input.GetKey(KeyCode.D) && horzEnable)
         {
             this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
+            //transform.position += new Vector3( 1f * this.speed, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.W) && vertEnable)
+        {
+            this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, 1.5f * this.speed);
+        }
+        if (Input.GetKey(KeyCode.S) && vertEnable)
+        {
+            this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, -1.5f * this.speed);
             //transform.position += new Vector3( 1f * this.speed, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.Space))
@@ -200,7 +209,7 @@ public class Hero : MonoBehaviour {
     {
         Vector2 myForce = new Vector2(-1 * force, 0);
         MoveDisable();
-        this.rigidbody.velocity = new Vector2(-Mathf.Sqrt(2f * jumpHight * Gravity), Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f);
+        this.rigidbody.velocity = new Vector2(-Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f, Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f);
         this.Invoke("MoveEnable", 0.3f);
         //this.rigidbody.AddForce(myForce);
     }

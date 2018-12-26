@@ -9,9 +9,9 @@ public class Generator : MonoBehaviour {
     // livetime要小于interval
     private float interval = 3f;
 
-    private float speed = 100;
+    private float speed = 150; 
 
-    private float livetime = 1f;
+    private float livetime = 1.5f;
 
     private float count = 0;
 
