@@ -10,7 +10,7 @@ public class GamePersist {
     // 保存一个hero变量，hero变量向GamePersist注册自己
     public Hero hero;
     // 水位高度
-    public int waterHeight;
+    public float waterHeight;
     // 每层楼层高度
     private int preLevelHeight;
 
@@ -29,7 +29,7 @@ public class GamePersist {
     // 定义水位初始高度
     private GamePersist()
     {
-        this.Init(-100, 1, 250);
+        this.Init(-10, 1, 250);
     }
 
     // 提供一个初始化方法
@@ -42,7 +42,7 @@ public class GamePersist {
     }
 
     // 人与水位之差
-    public int GetDiff()
+    public float GetDiff()
     {
         return this.currentLevel * this.preLevelHeight - this.waterHeight;
     }

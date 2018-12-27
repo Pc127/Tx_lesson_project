@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Generator : MonoBehaviour {
-
-    public GameObject sth;
-
-    // livetime要小于interval
-    private float interval = 3f;
-
-    private float speed = 150; 
-
-    private float livetime = 1.5f;
-
-    private float count = 0;
-
-    private void Start()
-    {
-        DoCreate();
-    }
-
-    // 间隔执行
-    void Update () {
-		if(count > interval)
-        {
-            count = 0;
-            DoCreate();
-
-        }
-        else
-        {
-            count += Time.deltaTime;
-        }
-	}
-
-    void DoCreate()
-    {
-        GameObject th = Instantiate(this.sth);
-        th.transform.SetParent( this.transform);
-        th.transform.localPosition = new Vector2(0, 0);
-        th.transform.localScale = new Vector3(1, 1, 1);
-        th.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1 * this.speed);
-        this.Invoke("DoDestroy", this.livetime);
-    }
-
-    private void DoDestroy()
-    {   // 删除所有子节点
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
-    }
-}
-=======
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -108,4 +52,3 @@ public class Generator : MonoBehaviour {
         }
     }
 }
->>>>>>> f367e59a162a1ce8b60970d7fae4b654fe32c468
