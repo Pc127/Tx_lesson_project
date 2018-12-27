@@ -113,6 +113,15 @@ public class Hero : MonoBehaviour {
             this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
             //transform.position += new Vector3( 1f * this.speed, 0, 0);
         }
+        if (Input.GetKey(KeyCode.W) && vertEnable)
+        {
+            this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, 1.5f * this.speed);
+        }
+        if (Input.GetKey(KeyCode.S) && vertEnable)
+        {
+            this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, -1.5f * this.speed);
+            //transform.position += new Vector3( 1f * this.speed, 0, 0);
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("Space Down");

@@ -6,13 +6,13 @@ using UnityEngine;
 public class GamePersist {
 
     // 当前楼层
-    public int currentLevel;
+    public float currentLevel;
     // 保存一个hero变量，hero变量向GamePersist注册自己
     public Hero hero;
     // 水位高度
-    public int waterHeight;
+    public float waterHeight;
     // 每层楼层高度
-    private int preLevelHeight;
+    private float preLevelHeight;
 
     // 设计为单例模式
     private static GamePersist gamePersist = null;
@@ -34,7 +34,7 @@ public class GamePersist {
 
     // 提供一个初始化方法
     // 参数为：初始水位 当前楼层 每层楼高
-    public void Init(int water, int current, int pre)
+    public void Init(float water, float current, float pre)
     {
         this.waterHeight = water;
         this.currentLevel = current;
@@ -42,7 +42,7 @@ public class GamePersist {
     }
 
     // 人与水位之差
-    public int GetDiff()
+    public float GetDiff()
     {
         return this.currentLevel * this.preLevelHeight - this.waterHeight;
     }
