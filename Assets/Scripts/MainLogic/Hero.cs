@@ -18,7 +18,7 @@ public class Hero : MonoBehaviour {
     private int spindex = 1;
     private bool spright = true;
     // 两帧动画的间隔
-    private float spinterval = 0.2f;
+    private float spinterval = 0.3f;
     private float spcount = 0;
     // 是否可以移动
     public bool moveEnable = true;
@@ -58,8 +58,8 @@ public class Hero : MonoBehaviour {
     void Update () {
         // 控制动画
         spcount += Time.deltaTime;
-        Debug.Log(spcount);
-        Debug.Log(spindex);
+        //Debug.Log(spcount);
+        //Debug.Log(spindex);
         if (spcount > spinterval)
         {   // 123的循环
             spcount -= spinterval;

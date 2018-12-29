@@ -9,14 +9,10 @@ public class WaterLevel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         GamePersist.GetInstance().waterHeight = GamePersist.GetInstance().waterHeight + this.waterSpeed;
-        if(GamePersist.GetInstance().GetDiff() < 0)
+        if (GamePersist.GetInstance().waterHeight > 0)
         {
             // 600为宽度 剩下为长度
-            this.GetComponent<RectTransform>().sizeDelta = new Vector2( 600, -1 * GamePersist.GetInstance().GetDiff());
-        }
-        if(GamePersist.GetInstance().GetDiff() > 0)
-        {
-            this.GetComponent<RectTransform>().sizeDelta = new Vector2(600, -1 * GamePersist.GetInstance().GetDiff());
+            this.GetComponent<RectTransform>().sizeDelta = new Vector2( 600, GamePersist.GetInstance().waterHeight);
         }
     }
 }

@@ -44,6 +44,6 @@ public class GamePersist {
     // 人与水位之差
     public float GetDiff()
     {
-        return this.currentLevel * this.preLevelHeight - this.waterHeight;
+        return (this.currentLevel - 1.0f) * this.preLevelHeight - this.waterHeight;
     }
 }
