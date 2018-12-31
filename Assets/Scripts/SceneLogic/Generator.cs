@@ -7,11 +7,11 @@ public class Generator : MonoBehaviour {
     public GameObject sth;
 
     // livetime要小于interval
-    private float interval = 3f;
+    public float interval = 3f;
 
-    private float speed = 100;
+    public float speed = 100;
 
-    private float livetime = 1f;
+    public float livetime = 1f;
 
     private float count = 0;
 
@@ -37,6 +37,7 @@ public class Generator : MonoBehaviour {
     void DoCreate()
     {
         GameObject th = Instantiate(this.sth);
+        th.SetActive(true);
         th.transform.SetParent( this.transform);
         th.transform.localPosition = new Vector2(0, 0);
         th.transform.localScale = new Vector3(1, 1, 1);
