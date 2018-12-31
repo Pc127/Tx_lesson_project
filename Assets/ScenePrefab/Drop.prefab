@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7e50cbbf2ebe6d81a04f85758b028069dd9dd75a
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &1482758303575150
@@ -38,8 +41,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 1, y: -0.0000036657}
   m_SizeDelta: {x: 17.83, y: 33.84}
+=======
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 15, y: 30}
+>>>>>>> 7e50cbbf2ebe6d81a04f85758b028069dd9dd75a
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222517908403088266
 CanvasRenderer:
@@ -103,7 +111,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: -0.06842041, y: -2.1202316}
+=======
+  m_Offset: {x: 0.06852722, y: 0}
+>>>>>>> 7e50cbbf2ebe6d81a04f85758b028069dd9dd75a
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -114,7 +126,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 15.0896, y: 24.664658}
+=======
+  m_Size: {x: 15.089386, y: 30}
+>>>>>>> 7e50cbbf2ebe6d81a04f85758b028069dd9dd75a
   m_EdgeRadius: 0
 --- !u!50 &50200764559604422
 Rigidbody2D:
@@ -137,6 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 =======
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
@@ -279,3 +296,5 @@ RectTransform:
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 >>>>>>> f367e59a162a1ce8b60970d7fae4b654fe32c468
+=======
+>>>>>>> 7e50cbbf2ebe6d81a04f85758b028069dd9dd75a

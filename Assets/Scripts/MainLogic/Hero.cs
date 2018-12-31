@@ -18,7 +18,7 @@ public class Hero : MonoBehaviour {
     private int spindex = 1;
     private bool spright = true;
     // 两帧动画的间隔
-    private float spinterval = 0.2f;
+    private float spinterval = 0.3f;
     private float spcount = 0;
     // 是否可以移动
     public bool moveEnable = true;
@@ -58,8 +58,8 @@ public class Hero : MonoBehaviour {
     void Update () {
         // 控制动画
         spcount += Time.deltaTime;
-        Debug.Log(spcount);
-        Debug.Log(spindex);
+        //Debug.Log(spcount);
+        //Debug.Log(spindex);
         if (spcount > spinterval)
         {   // 123的循环
             spcount -= spinterval;
@@ -104,11 +104,11 @@ public class Hero : MonoBehaviour {
         float horKey = Input.GetAxis("Horizontal");
         float verKey = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.A) && horzEnable)
+        if (Input.GetKey(KeyCode.A)&& horzEnable)
         {
             this.rigidbody.velocity = new Vector2(-1.5f * this.speed, this.rigidbody.velocity.y);
         }
-        if (Input.GetKey(KeyCode.D) && horzEnable)
+        if (Input.GetKey(KeyCode.D)&& horzEnable)
         {
             this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
             //transform.position += new Vector3( 1f * this.speed, 0, 0);
@@ -209,7 +209,7 @@ public class Hero : MonoBehaviour {
     {
         Vector2 myForce = new Vector2(-1 * force, 0);
         MoveDisable();
-        this.rigidbody.velocity = new Vector2(-Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f, Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f);
+        this.rigidbody.velocity = new Vector2(-Mathf.Sqrt(2f * jumpHight * Gravity), Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f);
         this.Invoke("MoveEnable", 0.3f);
         //this.rigidbody.AddForce(myForce);
     }

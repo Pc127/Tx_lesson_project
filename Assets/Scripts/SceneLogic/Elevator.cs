@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    private int speed = 30;
+    private int speed = 40;
 
     //高点
     private int startPoint = 80;
 
     //低点
-    private int endPoint = -80;
+    private int endPoint = -40;
     // Start is called before the first frame update
     void Start()
     {
