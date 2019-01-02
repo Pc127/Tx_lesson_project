@@ -9,6 +9,8 @@ public class GamePersist {
     public float currentLevel;
     // 保存一个hero变量，hero变量向GamePersist注册自己
     public Hero hero;
+    // 保存场景2九楼的老板
+    public Boss boss;
     // 水位高度
     public float waterHeight;
     // 每层楼层高度
