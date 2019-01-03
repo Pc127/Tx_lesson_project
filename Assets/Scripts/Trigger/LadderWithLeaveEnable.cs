@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class LadderWithLeaveEnable : MonoBehaviour
 {
-    public GameObject obj;
+    public GameObject actObj1;
+
+    public GameObject actObj2;
+
+    public GameObject disObj;
     // 触发梯子，会使人物只能垂直移动
     private bool enable = false;
 
@@ -39,7 +43,9 @@ public class LadderWithLeaveEnable : MonoBehaviour
         this.enable = false;
         GamePersist.GetInstance().hero.horzEnable = true;
         GamePersist.GetInstance().hero.vertEnable = false;
-        obj.SetActive(true);
+        actObj1.SetActive(true);
+        actObj2.SetActive(true);
+        disObj.SetActive(false);
         this.gameObject.SetActive(false);
         
     }

@@ -11,7 +11,10 @@ public class ActDisactWithoutEnable : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        this.disactSth.SetActive(false);
-        this.actSth.SetActive(true);
+        if (other.gameObject.GetComponent<Hero>() != null)
+        {
+            this.disactSth.SetActive(false);
+            this.actSth.SetActive(true);
+        }
     }
 }
