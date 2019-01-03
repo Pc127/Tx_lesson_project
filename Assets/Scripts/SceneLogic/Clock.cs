@@ -9,7 +9,7 @@ public class Clock : MonoBehaviour
     //最大旋转角度
     private float maxm = 0.35f;
 
-    private float minm = -0.35f;
+    private float minm = -0.20f;
 
     // 旋转速度
     private float speed = 0.1f;
