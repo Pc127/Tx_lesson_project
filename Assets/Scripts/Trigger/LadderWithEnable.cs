@@ -11,7 +11,7 @@ public class LadderWithEnable : MonoBehaviour {
     {
         if (enable)
         {
-            if (GamePersist.GetInstance().hero.joy.movement.y > 0.5 || Input.GetKey(KeyCode.A))
+            if (GamePersist.GetInstance().hero.joy.movement.y > 0.5 || Input.GetKey(KeyCode.W))
             {
                 GamePersist.GetInstance().hero.horzEnable = !GamePersist.GetInstance().hero.horzEnable;
                 GamePersist.GetInstance().hero.vertEnable = !GamePersist.GetInstance().hero.vertEnable;
