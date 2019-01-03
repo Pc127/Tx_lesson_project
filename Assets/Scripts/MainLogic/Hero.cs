@@ -15,6 +15,10 @@ public class Hero : MonoBehaviour {
     public Sprite sp01;
     public Sprite sp02;
     public Sprite sp03;
+    public Sprite pa01;
+    public Sprite pa02;
+    public Sprite or1;
+    public Sprite or01;
     private int spindex = 1;
     private bool spright = true;
     // 两帧动画的间隔
@@ -60,31 +64,63 @@ public class Hero : MonoBehaviour {
         spcount += Time.deltaTime;
         //Debug.Log(spcount);
         //Debug.Log(spindex);
-        if (spcount > spinterval)
+        if (joy.movement.y == 0 && joy.movement.x == 0)
+        {
+            image.overrideSprite = spright ? or1 : or01;
+            this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+        }
+        else if (spcount > spinterval && (joy.movement.y != 0 || joy.movement.x != 0))
         {   // 123的循环
             spcount -= spinterval;
             spindex = spindex % 4 +1;
-            if (spindex == 1)
+            if (vertEnable == false && joy.movement.y < 0.5f)
             {
-                image.overrideSprite = spright ? sp1 : sp01;
-                this.GetComponent<RectTransform>().localScale = new Vector3(1,1,0); ;
+                if (spindex == 1)
+                {
+                    image.overrideSprite = spright ? sp1 : sp01;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0); ;
+                }
+                else if (spindex == 2)
+                {
+                    image.overrideSprite = spright ? sp2 : sp02;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+                }
+                else if (spindex == 3)
+                {
+                    image.overrideSprite = spright ? sp3 : sp03;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+                }
+                else if (spindex == 4)
+                {
+                    image.overrideSprite = spright ? sp2 : sp02;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+                }
             }
-            else if (spindex == 2)
+            else if (vertEnable == true && (joy.movement.y > 0.5f || Input.GetKey(KeyCode.W)))
             {
-                image.overrideSprite = spright ? sp2 : sp02;
-                this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
-            }
-            else if (spindex == 3)
-            {
-                image.overrideSprite = spright ? sp3 : sp03;
-                this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+                if (spindex == 1)
+                {
+                    image.overrideSprite = spright ? pa01 : pa01;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0); ;
+                }
+                else if (spindex == 2)
+                {
+                    image.overrideSprite = spright ? pa02 : pa02;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+                }
+                else if (spindex == 3)
+                {
+                    image.overrideSprite = spright ? pa01 : pa01;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+                }
+                else if (spindex == 4)
+                {
+                    image.overrideSprite = spright ? pa02 : pa02;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
+                }
+
             }
 
-            else if (spindex == 4) {
-                image.overrideSprite = spright ? sp2 : sp02;
-                this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
-            }
-                
         }
         if (movement.x < 0)
             spright = false;
