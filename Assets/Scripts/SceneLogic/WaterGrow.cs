@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class WaterGrow : MonoBehaviour
 {
-    public GameObject obj;
+    public RectTransform rect;
 
-    private int speed;
+    public BoxCollider2D box;
 
+    private int speed = 1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(rect.localScale.y < 170)
+        {
+            rect.localScale = new Vector3(1, (rect.localScale.y) + speed, 0);
+            box.size = new Vector2(140, rect.localScale.y + speed);
+        }
     }
 }
