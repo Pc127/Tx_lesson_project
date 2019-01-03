@@ -18,7 +18,7 @@ public class Boss : MonoBehaviour
 
     private int start = 0;
 
-    private float speed = 0.6f;
+    public float speed = 0.3f;
 
     [HideInInspector]
     public bool enable = false;

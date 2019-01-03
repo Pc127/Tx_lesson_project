@@ -8,6 +8,8 @@ public class PasswordInput : MonoBehaviour
     public GameObject safeTrigger;
     public GameObject exitTrigger;
     public GameObject doorTrigger;
+    public GameObject machineTrigger;
+    public GameObject key;
     // 输出的目标
     public Image i0;
     public Image i1;
@@ -168,10 +170,11 @@ public class PasswordInput : MonoBehaviour
     public void Success()
     {
         GamePersist.GetInstance().hero.DoAWarn("终于拿到了开关的钥匙");
-        DisActive();
+        key.SetActive(true);
         safeTrigger.SetActive(false);
         exitTrigger.SetActive(true);
         doorTrigger.SetActive(false);
+        DisActive();
     }
 
     public void DisActive()
