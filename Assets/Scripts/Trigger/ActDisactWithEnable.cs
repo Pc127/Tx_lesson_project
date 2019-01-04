@@ -19,6 +19,7 @@ public class ActDisactWithEnable : MonoBehaviour
             {
                 disactSth.SetActive(false);
                 actSth.SetActive(true);
+                GamePersist.GetInstance().hero.interEnable = false;
             }
         }
     }

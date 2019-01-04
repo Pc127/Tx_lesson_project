@@ -40,13 +40,16 @@ public class LadderWithLeaveEnable : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        this.enable = false;
-        GamePersist.GetInstance().hero.horzEnable = true;
-        GamePersist.GetInstance().hero.vertEnable = false;
-        actObj1.SetActive(true);
-        actObj2.SetActive(true);
-        disObj.SetActive(false);
-        this.gameObject.SetActive(false);
+        if (GamePersist.GetInstance().hero.GetY() >= 284)
+        {
+            this.enable = false;
+            GamePersist.GetInstance().hero.horzEnable = true;
+            GamePersist.GetInstance().hero.vertEnable = false;
+            actObj1.SetActive(true);
+            actObj2.SetActive(true);
+            disObj.SetActive(false);
+            this.gameObject.SetActive(false);
+        }
         
     }
 }

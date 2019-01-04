@@ -19,6 +19,7 @@ public class AddForceWithoutEnable : MonoBehaviour {
         if(other.GetComponent<Hero>() != null)
         {
             Debug.Log("与水滴碰撞");
+            GamePersist.GetInstance().hero.DoAWarn("好痛");
             GamePersist.GetInstance().hero.AddForce(10000000);
             //GamePersist.GetInstance().hero.velocity();
         }

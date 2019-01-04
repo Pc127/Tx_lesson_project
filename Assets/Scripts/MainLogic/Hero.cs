@@ -257,4 +257,14 @@ public class Hero : MonoBehaviour {
     {
         this.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
     }
+
+    public float GetX()
+    {
+        return this.gameObject.GetComponent<RectTransform>().transform.localPosition.x;
+    }
+
+    public float GetY()
+    {
+        return this.gameObject.GetComponent<RectTransform>().transform.localPosition.y;
+    }
 }

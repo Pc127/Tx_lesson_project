@@ -32,21 +32,35 @@ public class LevelLoader : MonoBehaviour {
 		if (GamePersist.GetInstance().currentLevel > currentLevel)
         {
             this.currentLevel++;
-            this.upcount += 125;
+            this.upcount += 50;
         }else if (GamePersist.GetInstance().currentLevel < currentLevel)
         {
             this.currentLevel--;
-            this.downcount += 125;
+            this.downcount += 50;
+        }
+
+        if(upcount >0 && downcount > 0)
+        {
+            if (upcount > downcount)
+            {
+                upcount -= downcount;
+                downcount = 0;
+            }
+            else
+            {
+                downcount -= upcount;
+                upcount = 0;
+            }
         }
         if( upcount != 0)
         {
-            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y - 2);
+            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y - 5);
             //GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 2);
             upcount--;
         }
         if (downcount != 0)
         {
-            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y + 2);
+            this.levelContainer.transform.localPosition = new Vector2(0, this.levelContainer.transform.localPosition.y + 5);
             //GamePersist.GetInstance().hero.transform.localPosition = new Vector2(0, GamePersist.GetInstance().hero.transform.localPosition.y - 2);
             downcount--;
         }
