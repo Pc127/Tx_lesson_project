@@ -127,41 +127,44 @@ public class Hero : MonoBehaviour {
         else if (movement.x > 0)
             spright = true;
 
-        movement = joy.movement;
-        // 不控制向上跳跃
-        if (horzEnable == false)
-            movement.x = 0;
-        if (vertEnable == false)
-            movement.y = 0;
-        if (horzEnable) this.rigidbody.velocity = new Vector2(movement.x * this.speed, this.rigidbody.velocity.y);
-        if (vertEnable) this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, movement.y * this.speed);
+        if (moveEnable)
+        {
+            movement = joy.movement;
+            // 不控制向上跳跃
+            if (horzEnable == false)
+                movement.x = 0;
+            if (vertEnable == false)
+                movement.y = 0;
+            if (horzEnable) this.rigidbody.velocity = new Vector2(movement.x * this.speed, this.rigidbody.velocity.y);
+            if (vertEnable) this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, movement.y * this.speed);
 
 
-        float horKey = Input.GetAxis("Horizontal");
-        float verKey = Input.GetAxis("Vertical");
+            float horKey = Input.GetAxis("Horizontal");
+            float verKey = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.A)&& horzEnable)
-        {
-            this.rigidbody.velocity = new Vector2(-1.5f * this.speed, this.rigidbody.velocity.y);
-        }
-        if (Input.GetKey(KeyCode.D)&& horzEnable)
-        {
-            this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
-            //transform.position += new Vector3( 1f * this.speed, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.W) && vertEnable)
-        {
-            this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, 1.5f * this.speed);
-        }
-        if (Input.GetKey(KeyCode.S) && vertEnable)
-        {
-            this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, -1.5f * this.speed);
-            //transform.position += new Vector3( 1f * this.speed, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //Debug.Log("Space Down");
-            Jump();
+            if (Input.GetKey(KeyCode.A) && horzEnable)
+            {
+                this.rigidbody.velocity = new Vector2(-1.5f * this.speed, this.rigidbody.velocity.y);
+            }
+            if (Input.GetKey(KeyCode.D) && horzEnable)
+            {
+                this.rigidbody.velocity = new Vector2(1.5f * this.speed, this.rigidbody.velocity.y);
+                //transform.position += new Vector3( 1f * this.speed, 0, 0);
+            }
+            if (Input.GetKey(KeyCode.W) && vertEnable)
+            {
+                this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, 1.5f * this.speed);
+            }
+            if (Input.GetKey(KeyCode.S) && vertEnable)
+            {
+                this.rigidbody.velocity = new Vector2(this.rigidbody.velocity.x, -1.5f * this.speed);
+                //transform.position += new Vector3( 1f * this.speed, 0, 0);
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //Debug.Log("Space Down");
+                Jump();
+            }
         }
     }
 
@@ -248,5 +251,10 @@ public class Hero : MonoBehaviour {
         this.rigidbody.velocity = new Vector2(-Mathf.Sqrt(2f * jumpHight * Gravity), Mathf.Sqrt(2f * jumpHight * Gravity)/1.5f);
         this.Invoke("MoveEnable", 0.3f);
         //this.rigidbody.AddForce(myForce);
+    }
+
+    public void KeepVertical()
+    {
+        this.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
     }
 }

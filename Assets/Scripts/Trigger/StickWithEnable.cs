@@ -32,6 +32,7 @@ public class StickWithEnable : MonoBehaviour
 
     private void stick()
     {
+        Debug.Log("stick");
         GamePersist.GetInstance().hero.transform.parent = this.transform;
         GamePersist.GetInstance().hero.moveEnable = false;
         GamePersist.GetInstance().hero.DisableGravity();
@@ -40,6 +41,7 @@ public class StickWithEnable : MonoBehaviour
 
     private void unStick()
     {
+        Debug.Log("Unstick");
         GamePersist.GetInstance().hero.transform.parent = this.pretrans.transform;
         GamePersist.GetInstance().hero.moveEnable = true;
         GamePersist.GetInstance().hero.EnableGravity();
@@ -49,12 +51,19 @@ public class StickWithEnable : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        this.enable = true;
+        if (other.gameObject.GetComponent<Hero>() != null)
+        {
+            this.enable = true;
+        }
+        
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        this.enable = false;
-        unStick();
+        if (other.gameObject.GetComponent<Hero>() != null)
+        {
+            this.enable = false;
+            unStick();
+        }
     }
 }
