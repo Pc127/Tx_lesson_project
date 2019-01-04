@@ -20,6 +20,7 @@ public class LadderWithLeaveEnable : MonoBehaviour
             {
                 GamePersist.GetInstance().hero.horzEnable = !GamePersist.GetInstance().hero.horzEnable;
                 GamePersist.GetInstance().hero.vertEnable = !GamePersist.GetInstance().hero.vertEnable;
+                GamePersist.GetInstance().hero.DisableGravity();
                 enable = false;
             }
         }
@@ -50,6 +51,7 @@ public class LadderWithLeaveEnable : MonoBehaviour
             disObj.SetActive(false);
             this.gameObject.SetActive(false);
         }
-        
+        GamePersist.GetInstance().hero.EnableGravity();
+
     }
 }

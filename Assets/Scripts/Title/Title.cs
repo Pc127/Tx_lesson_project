@@ -8,7 +8,7 @@ public class Title : MonoBehaviour {
     // 定义了进入游戏场景
     public void EnterGame1()
     {
-        SceneManager.LoadScene("scene2");
+        SceneManager.LoadScene("caption1");
     }
     //定义退出游戏
     public void QuitGame()
@@ -23,6 +23,6 @@ public class Title : MonoBehaviour {
     //定义前往场景3,目前切换到场景3水位未重置
     public void EnterGame2()
     {
-        SceneManager.LoadScene("scene3");
+        SceneManager.LoadScene("caption2");
     }
 }
