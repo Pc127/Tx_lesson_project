@@ -15,6 +15,7 @@ public class LadderWithEnable : MonoBehaviour {
             {
                 GamePersist.GetInstance().hero.horzEnable = false; //!GamePersist.GetInstance().hero.horzEnable;
                 GamePersist.GetInstance().hero.vertEnable = true;  //!GamePersist.GetInstance().hero.vertEnable;
+                GamePersist.GetInstance().hero.DisableGravity();
                 enable = false;
             }
         }
@@ -35,6 +36,7 @@ public class LadderWithEnable : MonoBehaviour {
 
     public void OnTriggerExit2D(Collider2D other)
     {
+        GamePersist.GetInstance().hero.EnableGravity();
         this.enable = false;
         GamePersist.GetInstance().hero.horzEnable = true;
         GamePersist.GetInstance().hero.vertEnable = false;
