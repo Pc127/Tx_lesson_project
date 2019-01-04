@@ -8,6 +8,21 @@ public class Title : MonoBehaviour {
     // 定义了进入游戏场景
     public void EnterGame()
     {
-        SceneManager.LoadScene("game_scene");
+        SceneManager.LoadScene("scene2");
+    }
+    //定义退出游戏
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    //定义退回到主菜单
+    public void BacktoTitle()
+    {
+        SceneManager.LoadScene("main_title");
+    }
+    //定义前往场景3,目前切换到场景3水位未重置
+    public void Toscene3()
+    {
+        SceneManager.LoadScene("scene3");
     }
 }
