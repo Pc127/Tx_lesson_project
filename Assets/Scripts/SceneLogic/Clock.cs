@@ -7,12 +7,12 @@ public class Clock : MonoBehaviour
     public GameObject stick;
 
     //最大旋转角度
-    private float maxm = 0.35f;
+    private float maxm = 0.75f;
 
-    private float minm = -0.20f;
+    private float minm = -0.01f;
 
     // 旋转速度
-    private float speed = 0.1f;
+    private float speed = 0.3f;
 
     private bool isPuls = true;
 
