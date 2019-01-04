@@ -96,12 +96,12 @@ public class Hero : MonoBehaviour {
                     this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
                 }
             }
-            else if (vertEnable == true && (joy.movement.y > 0.5f || Input.GetKey(KeyCode.W)))
+            else if (vertEnable == true && (joy.movement.y > 0.5f || Input.GetKey(KeyCode.W)))  //爬楼的动作
             {
                 if (spindex == 1)
                 {
                     image.overrideSprite = spright ? pa01 : pa01;
-                    this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0); ;
+                    this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0); ;
                 }
                 else if (spindex == 2)
                 {
@@ -111,7 +111,7 @@ public class Hero : MonoBehaviour {
                 else if (spindex == 3)
                 {
                     image.overrideSprite = spright ? pa01 : pa01;
-                    this.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+                    this.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 1, 0);
                 }
                 else if (spindex == 4)
                 {
