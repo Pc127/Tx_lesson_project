@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Title : MonoBehaviour {
 
     // 定义了进入游戏场景
-    public void EnterGame()
+    public void EnterGame1()
     {
         SceneManager.LoadScene("scene2");
     }
@@ -21,7 +21,7 @@ public class Title : MonoBehaviour {
         SceneManager.LoadScene("main_title");
     }
     //定义前往场景3,目前切换到场景3水位未重置
-    public void Toscene3()
+    public void EnterGame2()
     {
         SceneManager.LoadScene("scene3");
     }

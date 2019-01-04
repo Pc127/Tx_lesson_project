@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class WaterLevel : MonoBehaviour {
 
+    // 根据waterlevel来配置
+    // 同时更新涨水速度
+    private void Start()
+    {
+        this.GetComponent<RectTransform>().sizeDelta = new Vector2(600, 0);
+        GamePersist.GetInstance().waterHeight = -10;
+    }
+
     // 下降速度
     private float waterSpeed = 0.2f;
 	// Update is called once per frame

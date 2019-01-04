@@ -174,6 +174,7 @@ public class PasswordInput : MonoBehaviour
         safeTrigger.SetActive(false);
         exitTrigger.SetActive(true);
         doorTrigger.SetActive(false);
+        machineTrigger.SetActive(true);
         DisActive();
     }
 

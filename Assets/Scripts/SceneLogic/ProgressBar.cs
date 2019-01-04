@@ -12,6 +12,8 @@ public class ProgressBar : MonoBehaviour
 
     public GameObject obj3;
 
+    public GameObject dis1;
+
     private int count=0;
 
     private int length=200;
@@ -35,6 +37,7 @@ public class ProgressBar : MonoBehaviour
         obj1.SetActive(true);
         obj2.SetActive(true);
         obj3.SetActive(true);
+        dis1.SetActive(false);
         this.gameObject.SetActive(false);
     }
 }
