@@ -5,6 +5,7 @@ using UnityEngine;
 // 暴露出来当前
 public class GamePersist {
 
+    public int buildNum = 0;
     // 当前楼层
     public float currentLevel;
     // 保存一个hero变量，hero变量向GamePersist注册自己

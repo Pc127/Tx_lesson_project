@@ -9,7 +9,9 @@ public class PasswordInput : MonoBehaviour
     public GameObject exitTrigger;
     public GameObject doorTrigger;
     public GameObject machineTrigger;
-    public GameObject key;
+    public AudioSource bgm;
+    public AudioClip clip;
+    //public GameObject key;
     // 输出的目标
     public Image i0;
     public Image i1;
@@ -169,12 +171,15 @@ public class PasswordInput : MonoBehaviour
 
     public void Success()
     {
+        bgm.clip = clip;
+        bgm.Play();
         GamePersist.GetInstance().hero.DoAWarn("终于拿到了开关的钥匙");
-        key.SetActive(true);
+        //key.SetActive(true);
         safeTrigger.SetActive(false);
         exitTrigger.SetActive(true);
         doorTrigger.SetActive(false);
         machineTrigger.SetActive(true);
+        GamePersist.GetInstance().hero.deadable = false;
         DisActive();
     }
 

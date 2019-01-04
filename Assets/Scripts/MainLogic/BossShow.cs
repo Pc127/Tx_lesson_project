@@ -11,6 +11,19 @@ public class BossShow : MonoBehaviour
     private void Start()
     {
         DoAWarn("这个甲烷处理器，好费电，我还是关了吧");
+        
+        this.Invoke("First", 2);
+    }
+
+    public void First()
+    {
+        GamePersist.GetInstance().hero.DoAWarn("这个甲烷净化器是用来净化废气的");
+        this.Invoke("Second", 2);
+    }
+
+    public void Second()
+    {
+        GamePersist.GetInstance().hero.DoAWarn("工厂在运转，怎么能说关就关");
     }
 
     public void DoAWarn(string str)
@@ -34,7 +47,7 @@ public class BossShow : MonoBehaviour
         w.transform.localPosition = new Vector2(0, 70);
         w.GetComponentInChildren<Text>().text = "哈哈，关掉了，这个月又省好多电";
         //this.paramOfDoNotWarn = w;
-        this.Invoke("DoNotWarn", 2);
+        this.Invoke("DoNotWarn", 5);
     }
     public void DoNotWarn()
     {

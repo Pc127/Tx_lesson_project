@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -50}
+  m_AnchoredPosition: {x: 146, y: -50}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871807074
@@ -220,7 +220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u76F4\u52302332\u5E74\u7684\u4E00\u4E2A\u590F\u5929\u3002\u5728\u4E16\u754C\u7684\u53E6\u4E00\u7AEF\uFF0C\u5357\u6781\u6D32\u6700\u5927\u7684\u51B0\u5DDD\u8F70\u7136\u57AE\u584C\uFF0C\u6D77\u5E73\u9762\u5F00\u59CB\u4EE5\u524D\u6240\u672A\u6709\u7684\u901F\u5EA6\u75AF\u6DA8\uFF0C\u4E00\u573A\u6D69\u52AB\u6B63\u5728\u8FEB\u8FD1\uFF0C\u6B63\u5982\u4E07\u5E74\u524D\u7684\u706D\u4E16\u6D2A\u6C34\u4E00\u822C\uFF0C\u50CF\u662F\u5728\u60E9\u7F5A\u7740\u4EBA\u7C7B\u7684\u8D2A\u5A6A\u548C\u7F6A\u5B7D\u3002\r"
+  m_Text: "\u4EE5\u4E0A\u7684\u5404\u4F4D\n\u611F\u8C22\u60A8\u7684\u6E38\u73A9"
 --- !u!222 &871807075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -365,7 +365,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E8C\u5341\u4E16\u7EAA\u521D\u671F\uFF0C\u65E5\u6E10\u52A0\u5267\u7684\u6E29\u5BA4\u6548\u5E94\u5E26\u6765\u7684\u540E\u679C\u5DF2\u521D\u89C1\u7AEF\u502A\u3002\u4F46\u8FD9\u4E00\u9690\u60A3\u5E26\u6765\u7684\u62C5\u5FE7\u7EC8\u7A76\u6CA1\u80FD\u80DC\u8FC7\u5229\u76CA\u7684\u5DE8\u5927\u9A71\u52A8\u529B\uFF0C\u6E29\u5BA4\u6C14\u4F53\u7684\u6392\u653E\u4ECE\u672A\u51CF\u7F13\u3002\r"
+  m_Text: "Cast\uFF08\u6392\u540D\u4E0D\u5206\u5148\u540E\uFF09:\nPM \u5434\u7FCA\u5353\n\u7B56\u5212
+    \u7A0B\u822A \u66F2\u6587\u9E4F \u6768\u4E00\u5E06 \u80E1\u5578\u5DDD\n\u7F8E\u672F
+    \u65B9\u96E8\u541B \u6731\u96EA\u7AE5\n\u7A0B\u5E8F \u8C22\u58EB\u6052 \u8C22\u5929\u7ACB
+    \u5F20\u4EAC"
 --- !u!222 &931919847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -467,7 +470,7 @@ GameObject:
   - component: {fileID: 1100473143}
   - component: {fileID: 1100473144}
   m_Layer: 0
-  m_Name: Caption1
+  m_Name: Caption3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,7 +504,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1100473142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd1e39fc3d2ab94c88a58a60bd670b4, type: 3}
+  m_Script: {fileID: 11500000, guid: f9924648f654f454faf066c573de6099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   t1: {fileID: 1997440634}
@@ -821,7 +824,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E8C\u5341\u4E16\u7EAA\uFF0C\u968F\u7740\u5DE5\u4E1A\u4E0E\u793E\u4F1A\u7ECF\u6D4E\u7684\u53D1\u5C55\uFF0C\u5316\u77F3\u71C3\u6599\u7684\u71C3\u70E7\u4E0E\u6E29\u5BA4\u6C14\u4F53\u7684\u6392\u653E\u91CF\u4E00\u76F4\u5448\u51E0\u4F55\u6570\u91CF\u7EA7\u4E0A\u5347\u3002"
+  m_Text: "\u6216\u8BB8\u4F60\u53EA\u662F\u4E00\u7C92\u5FAE\u5C18\uFF0C\u4F46\u4F60\u4ECD\u6709\u81EA\u5DF1\u7684\u529B\u91CF"
 --- !u!222 &1997440637
 CanvasRenderer:
   m_ObjectHideFlags: 0

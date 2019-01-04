@@ -38,6 +38,8 @@ public class Hero : MonoBehaviour {
     public bool keyAndWater = false;
     // 获取转轴的移动向量
     private Vector2 movement;
+
+    public bool deadable = true;
     
     private Rigidbody2D rigidbody;
 
