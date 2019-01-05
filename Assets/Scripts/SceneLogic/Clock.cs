@@ -12,7 +12,7 @@ public class Clock : MonoBehaviour
     private float minm = -0.01f;
 
     // 旋转速度
-    private float speed = 0.3f;
+    private float speed = 0.8f;
 
     private bool isPuls = true;
 

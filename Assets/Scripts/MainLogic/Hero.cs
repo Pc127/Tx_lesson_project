@@ -46,7 +46,7 @@ public class Hero : MonoBehaviour {
     private Vector2 pos;
     // 速度
     private float speed = 420.0f; //手机上420，电脑上140
-    private float Gravity = 20f;
+    private float Gravity = 100f;
     // 跳跃高度
     private float jumpForce = 500.0f;  
     private float jumpHight = 8000f;  //手机上8000，电脑上3500

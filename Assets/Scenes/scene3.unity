@@ -18016,7 +18016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.62, y: 0.59000003}
-  m_AnchoredPosition: {x: -7.5000186, y: -5.6250176}
+  m_AnchoredPosition: {x: -7.5000005, y: -5.625025}
   m_SizeDelta: {x: 63.78, y: 63.61}
   m_Pivot: {x: 0.5, y: 0.49999985}
 --- !u!1 &2065941527892205475
@@ -18415,7 +18415,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3962723417830103380}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c8609f47e8c1b9b449fa39ba539eac44, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
