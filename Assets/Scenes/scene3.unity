@@ -4891,7 +4891,7 @@ MonoBehaviour:
   sth: {fileID: 615167953}
   interval: 3
   speed: 100
-  livetime: 2
+  livetime: 2.5
 --- !u!114 &576686534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9613,7 +9613,7 @@ MonoBehaviour:
   sth: {fileID: 436790629}
   interval: 3
   speed: 100
-  livetime: 2
+  livetime: 2.5
 --- !u!114 &1155396984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17554,7 +17554,7 @@ MonoBehaviour:
   sth: {fileID: 615167953}
   interval: 3
   speed: 100
-  livetime: 2
+  livetime: 2.5
 --- !u!114 &2140068143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18016,7 +18016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.62, y: 0.59000003}
-  m_AnchoredPosition: {x: -7.4999933, y: -5.6250196}
+  m_AnchoredPosition: {x: -7.5000186, y: -5.6250176}
   m_SizeDelta: {x: 63.78, y: 63.61}
   m_Pivot: {x: 0.5, y: 0.49999985}
 --- !u!1 &2065941527892205475
