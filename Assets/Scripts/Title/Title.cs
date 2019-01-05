@@ -25,4 +25,14 @@ public class Title : MonoBehaviour {
     {
         SceneManager.LoadScene("caption2");
     }
+
+    public void Skip1()
+    {
+        SceneManager.LoadScene("scene2");
+    }
+
+    public void Skip2()
+    {
+        SceneManager.LoadScene("scene3");
+    }
 }

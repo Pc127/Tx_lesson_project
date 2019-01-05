@@ -471,6 +471,7 @@ MonoBehaviour:
   jumpEnable: 1
   interEnable: 0
   keyAndWater: 0
+  deadable: 1
 --- !u!50 &112532690
 Rigidbody2D:
   serializedVersion: 4
@@ -1568,8 +1569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: 6.85}
-  m_SizeDelta: {x: 51.182, y: 67.7}
+  m_AnchoredPosition: {x: 48.6, y: 25.3}
+  m_SizeDelta: {x: 40, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &414283426
 Rigidbody2D:
@@ -1616,7 +1617,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 60}
+  m_Size: {x: 40, y: 60}
   m_EdgeRadius: 0
 --- !u!114 &414283428
 MonoBehaviour:
@@ -3364,7 +3365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.62, y: 0.59000003}
-  m_AnchoredPosition: {x: -6.0000024, y: -4.500014}
+  m_AnchoredPosition: {x: -7.5000052, y: -5.617295}
   m_SizeDelta: {x: 63.78, y: 63.61}
   m_Pivot: {x: 0.5, y: 0.49999985}
 --- !u!114 &750603712
@@ -5682,7 +5683,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -270, y: -100}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348760941
 MonoBehaviour:
@@ -7363,7 +7364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -37}
+  m_AnchoredPosition: {x: 31, y: -18}
   m_SizeDelta: {x: 93.6, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773751375
@@ -7391,7 +7392,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.70365334, y: 0}
+  m_Offset: {x: 0.70365334, y: 10}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7402,7 +7403,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 94.976456, y: 20}
+  m_Size: {x: 94.976456, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &1773751377
 Rigidbody2D:
