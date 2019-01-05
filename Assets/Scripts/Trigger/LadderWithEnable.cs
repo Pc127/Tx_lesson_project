@@ -24,14 +24,12 @@ public class LadderWithEnable : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        GamePersist.GetInstance().hero.DisableGravity();
         this.enable = true;
         
     }
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        GamePersist.GetInstance().hero.DisableGravity();
         this.enable = true;
 
     }
