@@ -38,7 +38,7 @@ public class EndTrigger : MonoBehaviour
 
     private void Frist()
     {
-        GamePersist.GetInstance().hero.DoAWarn("我终于把它关掉了");
+        GamePersist.GetInstance().hero.DoAWarn("我终于把它打开了");
         this.Invoke("Second",3 );
     }
 
