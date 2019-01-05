@@ -487,7 +487,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 100
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sth: {fileID: 1820416638}
-  interval: 3
+  interval: 5
   speed: 100
   livetime: 2
 --- !u!114 &334817067
@@ -1694,7 +1694,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.00012207, y: -115}
-  m_SizeDelta: {x: 40, y: 20}
+  m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435014042
 MonoBehaviour:
@@ -1732,7 +1732,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 20}
+  m_Size: {x: 60, y: 20}
   m_EdgeRadius: 0
 --- !u!50 &435014044
 Rigidbody2D:
@@ -3365,7 +3365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.62, y: 0.59000003}
-  m_AnchoredPosition: {x: -7.5000052, y: -5.617295}
+  m_AnchoredPosition: {x: -7.500013, y: -5.625011}
   m_SizeDelta: {x: 63.78, y: 63.61}
   m_Pivot: {x: 0.5, y: 0.49999985}
 --- !u!114 &750603712
@@ -5973,7 +5973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sth: {fileID: 683636489}
-  interval: 3
+  interval: 5
   speed: 100
   livetime: 2
 --- !u!114 &1470855860
