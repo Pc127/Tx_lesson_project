@@ -17,6 +17,7 @@ public class Bottle : MonoBehaviour
 
     private void breakBottle(){
         GamePersist.GetInstance().boss.enable = true;
+		GamePersist.GetInstance ().boss.DoAWarn ("什么声音");
         this.GetComponent<Image>().overrideSprite = broken;
         this.GetComponent<RectTransform>().localScale = new Vector3(2, 1, 0);
     }

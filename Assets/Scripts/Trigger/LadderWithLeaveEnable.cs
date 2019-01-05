@@ -43,12 +43,12 @@ public class LadderWithLeaveEnable : MonoBehaviour
     {
         if (GamePersist.GetInstance().hero.GetY() >= 284)
         {
-            this.enable = false;
             actObj1.SetActive(true);
             actObj2.SetActive(true);
             disObj.SetActive(false);
             this.gameObject.SetActive(false);
         }
+		this.enable = false;
 		GamePersist.GetInstance().hero.horzEnable = true;
 		GamePersist.GetInstance().hero.vertEnable = false;
         GamePersist.GetInstance().hero.EnableGravity();

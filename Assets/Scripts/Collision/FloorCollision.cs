@@ -18,6 +18,7 @@ public class FloorCollision : MonoBehaviour {
         if (coll.gameObject.GetComponent<Hero>() != null)
         {
             GamePersist.GetInstance().hero.jumpEnable = true;
+			GamePersist.GetInstance ().hero.horzEnable = true;
             Debug.Log("与地板碰撞");
 
         }

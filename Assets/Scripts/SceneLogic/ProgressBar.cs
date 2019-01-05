@@ -16,6 +16,10 @@ public class ProgressBar : MonoBehaviour
 
     public GameObject dis1;
 
+    public GameObject dis2;
+
+	public RectTransform pro;
+
     private int count=0;
 
     private int length=200;
@@ -24,7 +28,7 @@ public class ProgressBar : MonoBehaviour
 
     // 时间
     private float time_count = 0;
-    private float interval = 0.2f;
+    private float interval = 0.35f;
 
     public void Update()
     {
@@ -45,6 +49,7 @@ public class ProgressBar : MonoBehaviour
         }
 
         index.localPosition = new Vector3(-100 + (length * 1.0f / max_count * count), 0, 0);
+		pro.localScale = new Vector3 (length * 1.0f / max_count * count, 1, 1);
     }
 
     public void Success()
@@ -54,6 +59,7 @@ public class ProgressBar : MonoBehaviour
         obj3.SetActive(true);
         obj4.SetActive(true);
         dis1.SetActive(false);
+        dis2.SetActive(false);
         this.gameObject.SetActive(false);
     }
 }

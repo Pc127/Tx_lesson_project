@@ -33,6 +33,7 @@ public class Boss : MonoBehaviour
         pos[3] = new Vector2(-120,-65);
         image = this.GetComponent<Image>();
         this.enable = false;
+		DoAWarn ("灯怎么黑了");
     }
 
     private void Update()
@@ -69,6 +70,20 @@ public class Boss : MonoBehaviour
         }
         
     }
+
+	public void DoAWarn(string str)
+	{
+		foreach (Transform child in transform)
+		{
+			Destroy(child.gameObject);
+		}
+
+		GameObject w = Instantiate(this.warn);
+		w.transform.parent = this.transform;
+        w.GetComponent<RectTransform>().localScale = new Vector3(0.5f, 0.5f, 0);
+		w.transform.localPosition = new Vector2(0, 70);
+		w.GetComponentInChildren<Text>().text = str;
+	}
 
 }
 
